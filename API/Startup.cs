@@ -1,4 +1,5 @@
 using API.Core.Interfaces;
+using API.Helpers;
 using API.Infrastructure.Context;
 using API.Infrastructure.Implements;
 using Microsoft.AspNetCore.Builder;
@@ -32,6 +33,7 @@ namespace API
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
 
             services.AddControllers();
             services.AddDbContext<StoreContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
