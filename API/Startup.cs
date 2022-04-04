@@ -41,11 +41,12 @@ namespace API
             //    //app.UseDeveloperExceptionPage();
 
             //}
-            app.UseSwaggerDocumention();
 
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+            app.UseSwaggerDocumention();
 
             app.UseHttpsRedirection();
 
