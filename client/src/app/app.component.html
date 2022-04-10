@@ -1,4 +1,10 @@
 <app-nav-bar></app-nav-bar>
 
-<h1>test</h1>
-<h2>E-Ticaret Sitemize Hoşgeldiniz</h2>
+<div class="container" style="margin-top: 100px;">
+    <h2>test</h2>
+    <ul>
+        <li class="list-unstyled" *ngFor="let product of products">
+            {{product.name}}
+        </li>
+    </ul>
+</div>
