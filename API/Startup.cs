@@ -53,6 +53,7 @@ namespace API
             app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseStatusCodePagesWithReExecute("/error/{0}");
+            app.UseStaticFiles();
 
             app.UseSwaggerDocumention();
 
