@@ -1,0 +1,7 @@
+.list-group li:hover {
+    cursor: pointer;
+    background-color: rgb(54, 157, 175);
+    transition: 0.3s;
+    color: black;
+    font-weight: 600;
+}
