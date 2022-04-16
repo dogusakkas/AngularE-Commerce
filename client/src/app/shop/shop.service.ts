@@ -14,7 +14,7 @@ baseurl ="https://localhost:44396/api/";
 
   constructor(private http : HttpClient) { }
 
-getProducts(brandId? : number,typeId? : number){
+getProducts(brandId? : number,typeId? : number,sort?: string){
 
   let params = new HttpParams();
 
@@ -24,6 +24,10 @@ getProducts(brandId? : number,typeId? : number){
 
   if(typeId){
     params = params.append('typeId',typeId.toString());
+  }
+
+  if(sort){
+    params=params.append('sort',sort);
   }
 
   return this.http.get<IPagination>(this.baseurl + 'Products',{observe:'response',params})
