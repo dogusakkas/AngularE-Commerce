@@ -19,11 +19,11 @@ getProducts(shopParams: ShopParams){
 
   let params = new HttpParams();
 
-  if(shopParams.brandId ! == 0){
+  if(shopParams.brandId !==0){
     params = params.append('brandId',shopParams.brandId.toString());
   }
 
-  if(shopParams.typeId ! == 0){
+  if(shopParams.typeId !==0){
     params = params.append('typeId',shopParams.typeId.toString());
   }
 
