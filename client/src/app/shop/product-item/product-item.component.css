@@ -10,3 +10,13 @@
     transform: scale(1.2);
     transition: 0.4s;
 }
+
+.card-body a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-body a:hover {
+    color: rgb(189, 63, 63);
+    transition: 0.3s;
+}
